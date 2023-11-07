@@ -1,0 +1,29 @@
+clear
+clc
+close all
+figure(5)
+x=0:pi/100:2*pi;
+y=sin(x);
+plot(x,y);
+xlabel('the x variable');
+ylabel('sine of x');
+title('The plot of a sine function');
+plot(x,y,'LineWidth',1.5);
+axis([0,5, -1,4]);
+grid on
+y1=cos(x);
+y2=y+y1;
+plot(x,y, 'r',x,y1,'b',x,y2)
+legend('sin(x)','cos(x)','sin(x)+ cos(x)')
+subplot(1,3,1);
+plot(x,y);
+subplot(1,3,2);
+plot(x,y1);
+subplot(1,3,3);
+plot(x,y2);
+stem(x,y)
+figure(69)
+x=[-2,3,4,0,5,-2.5,-1.4,0.7]
+stem(x)
+
+
